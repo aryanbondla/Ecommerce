@@ -77,7 +77,7 @@ export const products = [
     category: 'popcorn',
     description: 'Gourmet spiced popcorn for movie nights',
     rating: 4.1,
-    inStock: true
+    inStock: false
   },
   {
     id: 9,
@@ -117,7 +117,7 @@ export const products = [
     category: 'healthy',
     description: 'Healthy granola bars packed with oats and honey',
     rating: 4.4,
-    inStock: true
+    inStock: false
   },
   {
     id: 13,
@@ -157,7 +157,7 @@ export const products = [
     category: 'popcorn',
     description: 'Sweet caramel coated popcorn for a crunchy treat',
     rating: 4.5,
-    inStock: true
+    inStock: false
   },
   {
     id: 17,
@@ -177,7 +177,7 @@ export const products = [
     category: 'mix',
     description: 'High-protein mix of seeds, nuts, and dried fruits',
     rating: 4.3,
-    inStock: true
+    inStock: false
   },
   {
     id: 19,
@@ -197,7 +197,7 @@ export const products = [
     category: 'cookies',
     description: 'Homestyle oatmeal cookies with a chewy bite',
     rating: 4.2,
-    inStock: true
+    inStock: false
   },
    {
     id: 21,
@@ -227,7 +227,7 @@ export const products = [
     category: 'chocolate',
     description: 'Smooth milk chocolate filled with creamy ganache',
     rating: 4.8,
-    inStock: true
+    inStock: false
   },
   {
     id: 24,
@@ -257,7 +257,7 @@ export const products = [
     category: 'savory',
     description: 'Crispy nacho chips with a spicy kick',
     rating: 4.3,
-    inStock: true
+    inStock: false
   },
   {
     id: 27,
@@ -297,7 +297,7 @@ export const products = [
     category: 'healthy',
     description: 'Wholesome snack bar packed with dried fruits and nuts',
     rating: 4.5,
-    inStock: true
+    inStock: false
   }
 ]
 

@@ -2,7 +2,7 @@
   <button
     @click="handleAddToCart"
     :disabled="!inStock || loading"
-    class="text-white-600 bg-gray-600 text-md py-2 px-4 flex items-center justify-center"
+    class="text-white-600 bg-gray-600 text-md py-2 px-4 flex items-center justify-center cursor-pointer"
     :class="{ 'w-full': fullWidth }"
   >
     <ShoppingBagIcon v-if="!loading" class="w-4 h-4 mr-2 " />

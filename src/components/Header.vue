@@ -40,30 +40,6 @@
             </span>
           </router-link>
 
-          <!-- User Menu
-          <div class="relative" v-click-outside="closeUserMenu">
-            <button v-if="!isAuthenticated" @click="$router.push('/login')" class="text-black-600">
-              Login
-            </button>
-            <div v-else class="relative">
-              <button
-                @click="userMenuOpen = !userMenuOpen"
-                class="w-10 h-10 bg-primary-600 text-white rounded-full flex items-center justify-center font-semibold"
-              >
-                {{ getUserInitials }}
-              </button>
-               User Dropdown -->
-              <!-- <div v-if="userMenuOpen" class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border py-2"> -->
-                <!-- <div class="px-4 py-2 border-b">
-                  <p class="text-sm font-medium text-gray-900">{{ user.name }}</p>
-                  <p class="text-sm text-gray-500">{{ user.email }}</p>
-                </div>
-                <button @click="handleLogout" class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-black-100">
-                  Logout
-                </button>
-              </div>
-            </div>
-          </div> -->
 
           <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2 text-gray-600 hover:text-black-600">
             <Bars3Icon v-if="!mobileMenuOpen" class="w-6 h-6" />
@@ -103,7 +79,6 @@ const { cartItemsCount } = useCart()
 const { wishlistCount } = useWishlist()
 
 const mobileMenuOpen = ref(false)
-// const userMenuOpen = ref(false)
 
 const navLinks = [
   { name: 'Home', label: 'Home', to: '/' },
@@ -111,11 +86,4 @@ const navLinks = [
   { name: 'About', label: 'About', to: '/about' },
   { name: 'Contact', label: 'Contact', to: '/contact' }
 ]
-
-// const closeUserMenu = () => {
-//   userMenuOpen.value = false
-// }
-
-
-defineEmits(['search'])
 </script>

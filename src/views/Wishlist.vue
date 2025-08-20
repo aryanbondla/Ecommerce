@@ -50,7 +50,7 @@
 
               <button
                 @click="removeFromWishlist(item.id)"
-                class="p-2 text-red-500 hover:text-red-700 border border-red-200 rounded-lg hover:bg-red-50 transition-colors duration-200"
+                class="p-2 text-red-500 hover:text-red-700 border border-red-200 rounded-lg hover:bg-red-50 transition-colors duration-200 m-2"
               >
                 <TrashIcon class="w-5 h-5" />
               </button>

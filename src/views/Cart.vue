@@ -16,8 +16,8 @@
       </div>
 
       <div v-else class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <!-- Cart Items -->
-        <div class="lg:col-span-2 space-y-4">
+
+        <div class="lg:col-span-2 space-y-4 gap-6">
           <div
             v-for="item in cartItems"
             :key="item.id"
@@ -33,34 +33,33 @@
 
             <div class="flex-1 min-w-0">
               <router-link :to="`/product/${item.id}`">
-                <h3 class="text-lg font-semibold text-gray-900 hover:text-primary-600 transition-colors duration-200">
+                <h3 class="text-lg font-semibold text-gray-900 hover:text-primary-600 transition-colors duration-200 p-2">
                   {{ item.name }}
                 </h3>
               </router-link>
-              <p class="text-gray-600 text-sm mt-1">{{ item.description }}</p>
+              <p class="text-gray-600 text-sm mt-1 p-2">{{ item.description }}</p>
               <ProductPrice :price="item.price" class="mt-2" />
             </div>
 
             <div class="flex items-center space-x-4">
-              <!-- Quantity Controls -->
+
               <div class="flex items-center space-x-2">
                 <button
                   @click="updateQuantity(item.id, item.quantity - 1)"
-                  class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-50"
+                  class="w-8 h-8 rounded-full border border-black flex items-center justify-center hover:bg-gray-50"
                   :disabled="item.quantity <= 1"
                 >
-                  <MinusIcon class="w-4 h-4" />
+                  <MinusIcon class="w-4 h-4 text-black" />
                 </button>
-                <span class="w-8 text-center font-medium">{{ item.quantity }}</span>
+                <span class="w-8 text-center font-medium text-red-600">{{ item.quantity }}</span>
                 <button
                   @click="updateQuantity(item.id, item.quantity + 1)"
-                  class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-50"
+                  class="w-8 h-8 rounded-full border border-black flex items-center justify-center hover:bg-gray-50"
                 >
-                  <PlusIcon class="w-4 h-4" />
+                  <PlusIcon class="w-4 h-4 text-black" />
                 </button>
               </div>
 
-              <!-- Remove Button -->
               <button
                 @click="removeFromCart(item.id)"
                 class="text-red-500 hover:text-red-700 p-2"
@@ -71,39 +70,39 @@
           </div>
         </div>
 
-        <!-- Order Summary -->
+
         <div class="lg:col-span-1">
-          <div class="bg-white rounded-lg shadow-sm p-6 sticky top-24">
-            <h2 class="text-xl font-semibold text-gray-900 mb-4">Order Summary</h2>
+          <div class="bg-white rounded-lg shadow-sm p-6 m-2 sticky top-24">
+            <h2 class="text-xl font-semibold text-gray-900 mb-4 p-2">Order Summary</h2>
 
             <div class="space-y-3 mb-6">
               <div class="flex justify-between">
-                <span class="text-gray-600">Subtotal</span>
-                <span class="font-medium">${{ cartTotal.toFixed(2) }}</span>
+                <span class="text-black p-2">Subtotal</span>
+                <span class="font-medium text-black p-2">${{ cartTotal.toFixed(2) }}</span>
               </div>
               <div class="flex justify-between">
-                <span class="text-gray-600">Shipping</span>
-                <span class="font-medium">Free</span>
+                <span class="text-black p-2">Shipping</span>
+                <span class="font-medium text-black p-2">Free</span>
               </div>
               <div class="flex justify-between">
-                <span class="text-gray-600">Tax</span>
-                <span class="font-medium">${{ (cartTotal * 0.08).toFixed(2) }}</span>
+                <span class="text-black p-2">Tax</span>
+                <span class="font-medium text-black p-2">${{ (cartTotal * 0.08).toFixed(2) }}</span>
               </div>
               <div class="border-t pt-3">
                 <div class="flex justify-between">
-                  <span class="text-lg font-semibold">Total</span>
-                  <span class="text-lg font-semibold">${{ (cartTotal * 1.08).toFixed(2) }}</span>
+                  <span class="text-lg font-semibold text-black p-2">Total</span>
+                  <span class="text-lg font-semibold text-black p-2">${{ (cartTotal * 1.08).toFixed(2) }}</span>
                 </div>
               </div>
             </div>
 
-            <button class="btn-primary w-full mb-4">
+            <button class="bg-green-600 text-white p-3 text-xl md:text-2xl w-full mb-4">
               Proceed to Checkout
             </button>
 
             <button
               @click="clearCart"
-              class="btn-secondary w-full"
+              class="bg-red-600 text-white p-3 w-full mt-2 text-xl md:text-2xl hover:bg-red-700 transition-colors duration-200"
             >
               Clear Cart
             </button>

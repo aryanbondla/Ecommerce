@@ -50,7 +50,7 @@
                 <div class="flex items-center space-x-4 p-2">
                   <button
                     @click="toggleWishlist"
-                    class="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200"
+                    class="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
                     :class="isInWishlist(product.id) ? 'text-red-600 border-red-300' : 'text-gray-600'"
                   >
                     <HeartIcon class="w-5 h-5" :class="isInWishlist(product.id) ? 'fill-current' : ''" />

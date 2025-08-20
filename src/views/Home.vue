@@ -13,12 +13,16 @@
               Discover our premium collection of organic and healthy snacks perfect for your evening cravings. From nuts and dried fruits to artisan treats, we have everything you need for a delicious and nutritious snacking experience.
             </p>
             <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <router-link to="/products" class="btn-primary">
-                Shop Now
+              <router-link to="/products" class="p-4">
+                <button class="bg-green-600 text-white rounded-md p-4 hover:bg-green-700 transition-colors duration-200 cursor-pointer">
+                  Shop Now
+                </button>
               </router-link>
-              <button class="btn-secondary">
-                Learn More
-              </button>
+              <router-link to="/about" class="p-4">
+                <button class="bg-gray-900 text-white rounded-md p-4 hover:bg-gray-800 transition-colors duration-200 cursor-pointer">
+                  Learn More
+                </button>
+              </router-link>
             </div>
           </div>
 
@@ -50,7 +54,7 @@
             v-for="category in categories.slice(0, 6)"
             :key="category.id"
             @click="selectedCategory = category.id"
-            class="px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200"
+            class="px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 cursor-pointer"
             :class="selectedCategory === category.id
               ? 'bg-gray-900 text-white'
               : 'bg-white text-gray-900 hover:bg-gray-50 hover:text-gray-900'"
@@ -70,8 +74,7 @@
 
         <div class="text-center p-4">
           <router-link to="/products" class="btn-primary">
-            <button class="border border-2 rounded-md text-white bg-green-600 p-3">View All Products</button>
-
+            <button class="border border-2 rounded-md text-white bg-green-600 p-3 cursor-pointer">View All Products</button>
           </router-link>
         </div>
       </div>

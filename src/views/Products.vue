@@ -49,7 +49,6 @@
             <option value="name">Name</option>
             <option value="price-low">Price: Low to High</option>
             <option value="price-high">Price: High to Low</option>
-            <option value="rating">Rating</option>
           </select>
         </div>
       </div>
@@ -119,8 +118,6 @@ const filteredAndSortedProducts = computed(() => {
         return a.price - b.price
       case 'price-high':
         return b.price - a.price
-      case 'rating':
-        return b.rating - a.rating
       case 'name':
       default:
         return a.name.localeCompare(b.name)
